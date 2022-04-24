@@ -1,7 +1,11 @@
  instalação de fontes - expo install expo-font @expo-google-fonts/nomeDaFonteDoGoogle
  interface de carregamento - expo install expo-app-loading
  
- - react-native-responsive-fontsize -> biblioteca para trabalhar com fontes e tamanhos responsivos
- - icon.expo.fyi -> biblioteca de icones do expo -> @expo/vector-icons
+ - react-native-responsive-fontsize -> biblioteca para trabalhar com fontes e tamanhos responsivos.
+ - icon.expo.fyi -> biblioteca de icones do expo -> @expo/vector-icons.
  - react-native-iphone-x-helper -> biblioteca para ajudar a trabalhar com o bigode dos iphones.
+ - GestureHandlerRootView -> dentro da biblioteca 'react-native-gesture-handler' -> serve para fazer com que os botões 
+   personalizados se comportem da forma correta no android, caso contrario em alguns celulares o botão pode perder algumas
+   propriedades como onPress.
+ - React-hook-form -> 
  

@@ -6,6 +6,16 @@ export const Container = styled.View`
     background-color: ${({ theme }) => theme.colors.background};
 `;
 
+export const Fields = styled.View`
+`;
+
+export const TransactionsTypes = styled.View`
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-bottom: 16px;
+`;
+
 export const Header = styled.View`
     width: 100%;
     height: ${RFValue(113)}px;
@@ -25,8 +35,7 @@ export const Title = styled.Text`
 
 export const Form = styled.View`
     flex: 1;
-
     width: 100%;
-
     padding: 24px;
+    justify-content: space-between;
 `;

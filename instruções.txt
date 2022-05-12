@@ -8,4 +8,41 @@
    personalizados se comportem da forma correta no android, caso contrario em alguns celulares o botão pode perder algumas
    propriedades como onPress.
  - React-hook-form -> 
- 
+ - @react-navigation/native -> lib do react navigation para trabalhar com navegação
+    (siga a documentação porque tem mais coisas para instalar, de preferencia para fazer pelo expo)
+ - @react-navigation/native -> useNavigation -> hook para trabalhar com navegação.
+ - @react-navigation/bottom-tabs -> lib do bottom tabs
+
+ - async storage -> armazena no tipo chave valow, objeto do tipo json -> definimos uma chave para a coleção
+    instalação  -> expo install @react-native-async-storage/async-storage
+ - victory-native -> biblioteca para trabalhar com gráficos -> yarn add
+
+ - date-fns -> para trabalhar com datas -> yarn add
+
+ - react-native-svg-transformer -> lib para usar SVGs como componentes
+   precisa substituir o module.export do metro.config.js pelo que é usado na biblioteca.
+
+
+   ****
+   cliente id:
+   119445143927-bvbbgip44l10743bcacpcs28fu4egfdq.apps.googleusercontent.com
+
+
+   chave secreta do cliente:
+   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
+   ****
+
+   expo install expo-auth-session expo-random
+
+   - Variavei sde ambiente -> yarn add babel-plugin-inline-dotenv
+
+
+
+
+
+
+
+
+   ---------------------------------------------------------------------------
+   fluxo de navegação -> stack-navigato -> pilha -> @react-navigation/stack
+   

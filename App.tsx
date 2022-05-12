@@ -8,11 +8,19 @@ import {
   Poppins_500Medium,
   Poppins_700Bold
 } from '@expo-google-fonts/poppins';
+import 'intl';//para utilizar o intl dentro do android pois não vem nativo
+import 'intl/locale-data/jsonp/pt-BR';//para trabalhar com o locale-date em pt-BR pois não vem nativo no android
+import { StatusBar } from 'react-native';
+
+import { useAuth } from './src/hooks/auth';
 
 import theme from './src/global/styles/theme';
-import { Register } from './src/screens/Register';
 
-
+import { Routes } from './src/routes';
+import { AppRoutes } from './src/routes/app.routes';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { SignIn } from './src/screens/SignIn';
+import { AuthProvider } from './src/hooks/auth';
 
 export default function App() {
 
@@ -22,15 +30,22 @@ export default function App() {
     Poppins_700Bold
   });
 
-  if(!fontsLoading){
-    return <AppLoading/>
+  const { userStoragedLoading } = useAuth();
+
+  if (!fontsLoading || userStoragedLoading) {
+    return <AppLoading />
+    {/* Se a aplicação estiver carregando ela retorna o loading e não quebra por conta dos outros dados em memoria */ }
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <Register />
-    </ThemeProvider>
-
+    <GestureHandlerRootView style={{ flex: 1 } /* Para resolver os problemas de botões não clicaveis */}>
+      <ThemeProvider theme={theme}>
+        <StatusBar barStyle="light-content" />
+        <AuthProvider>
+          <Routes />
+        </AuthProvider>
+      </ThemeProvider>
+    </GestureHandlerRootView>
   )
 }
 

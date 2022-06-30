@@ -46,3 +46,10 @@
    ---------------------------------------------------------------------------
    fluxo de navegação -> stack-navigato -> pilha -> @react-navigation/stack
    
+
+   _____________________________________________
+   testes unitários
+
+   - lib -> react native testing library
+   - yarn add --dev @testing-library/react-native
+   - yarn add --dev @testing-library/jest-native

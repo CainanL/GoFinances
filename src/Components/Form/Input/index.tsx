@@ -3,10 +3,18 @@ import { TextInputProps } from 'react-native';
 
 import { Container } from './styles';
 
-type Props = TextInputProps;
+interface Props extends TextInputProps {
+    activity?: boolean;
+};
 
-export function Input({...rest}: Props){
+export function Input({
+    activity = false,
+    ...rest
+}: Props) {
     return (
-        <Container {...rest}/>
+        <Container
+            active={activity}
+            {...rest}
+        />
     )
 }
